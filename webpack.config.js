@@ -1,4 +1,6 @@
-const  path  = require('path');
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-require-imports */
+const path = require('path');
 
 module.exports = {
   mode: 'development',
