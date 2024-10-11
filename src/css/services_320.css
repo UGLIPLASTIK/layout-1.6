@@ -1,0 +1,25 @@
+@media (min-width: 320px) and (max-width: 767px){
+
+  .header button:nth-child(3) {
+    margin-left: 15px;
+  }
+
+  .main img {
+    width: 100%;
+  }
+
+  .main {
+    padding: 0 16px;
+  }
+
+  .header__contact-group--hidden {
+    display: none;
+  }
+
+  .main__text-2--hidden,
+  .main__text-3--hidden {
+    display: none;
+  }
+
+
+}

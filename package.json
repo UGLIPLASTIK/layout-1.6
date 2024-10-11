@@ -2,9 +2,11 @@
   "name": "layout-1.6",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "build": "webpack",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint"
   },
@@ -13,10 +15,21 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
+    "css-loader": "^7.1.2",
     "eslint": "^9.12.0",
+    "file-loader": "^6.2.0",
     "globals": "^15.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
     "typescript-eslint": "^8.8.1",
     "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.79.4"
   }
 }

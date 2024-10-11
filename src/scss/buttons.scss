@@ -1,0 +1,30 @@
+$buttonColor: #FF3E79;
+
+.service-button {
+  height: 40px;
+  width: 40px;
+  background-color: $buttonColor;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+.main__button {
+  margin: 16px 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px;
+  border: none;
+  background-color: #ffffff00;
+  cursor: pointer;
+  &:before {
+    content: url(../svg/icon-arrows.svg);
+    position: absolute;
+    top: 2px;
+    left: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+@media (min-width: 768px) and (max-width: 1119px) {
+  .header {
+    justify-content: left;
+    padding: 24px;
+    padding-bottom: 0;
+  }
+
+  .header__services-button--menu {
+    margin-right: 5vw;
+  }
+
+  .header__services-button--status {
+    margin-left: 20px;
+  }
+
+  .header__logo {
+    margin-right: auto;
+  }
+
+  .header__contact-group {
+    margin-right: 60px;
+  }
+
+  .header__contact-group button {
+    margin-right: 16px;
+  }
+
+  .header__contact-group button:last-child {
+    margin-right: 0;
+  }
+
+  .main {
+    padding: 25px;
+  }
+
+  .main__title::before {
+    left: -2.5rem;
+  }
+
+  .main__promo {
+    display: flex;
+  }
+
+  .main__text {
+    width: 312px;
+    margin-right: 48px;
+  }
+
+  .main__text-3--hidden {
+    display: none;
+  }
+
+
+  .main__image {
+    outline: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+  }
+}

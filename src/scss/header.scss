@@ -1,0 +1,45 @@
+@import './buttons.scss';
+
+
+
+.header {
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+
+  .header__button-group {
+    display: flex;
+    gap: 16px;
+  }
+
+  .header__logo {
+    margin-right: 20px;
+  }
+
+  .header__service-button--burger {
+    background: url(@/svg/burger.svg);
+  }
+
+  .header__service-button--checkstatus {
+    background: url(@/svg/checkstatus.svg);
+  }
+
+  .header__service-button--repair {
+    background: url(@/svg/repair.svg);
+    position: relative;
+    &::before {
+      content: '';
+      height: 32px;
+      width: 2px;
+      background-color: #EAEAEA;
+      position: absolute;
+      left: -20px;
+      bottom: 4px;
+    }
+  }
+
+  
+}
+

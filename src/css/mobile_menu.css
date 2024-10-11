@@ -1,0 +1,126 @@
+.aside {
+  position: absolute;
+  top: 0;
+
+  padding: 19px 24px 32px;
+
+  background-color: white;
+  border-right: 1px solid rgba(253, 255, 128, 0.49); 
+
+  width: 320px;
+
+  box-shadow: 3px 0px 20px 0px #fee08857
+}
+
+.aside__header {
+  margin-bottom: 46px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside_logo {
+  margin-right: auto;
+}
+
+.aside__services-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.aside__services-button span {
+  display: none;
+}
+
+.aside__services-button--phone {
+  background: url(../svg/call.svg) center / cover;
+}
+
+.aside__services-button--chat {
+  background: url(../svg/chat.svg) center / cover;
+}
+
+.aside__services-button--profile {
+  background: url(../svg/profile.svg) center / cover;
+}
+
+.aside__services-button--burger {
+  background: url(../svg/burger_mobile.svg) center / cover;
+  margin-right: 17px;
+}
+
+.aside__services-button--search {
+  background: url(../svg/search.svg) center / cover;
+}
+
+.aside__menu {
+  list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 250px;
+}
+
+.aside__menu-item {
+  padding-bottom: 32px;
+  cursor: pointer;
+}
+/* 
+.aside__menu-item:hover {
+  color: #7E7E82;
+} */
+
+.aside__menu-item:hover::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-2.4rem) translateY(-5px);
+  height: 32px;
+  border-radius: 0px 10px 10px 0px;
+  border-left: 4px solid #41F6D7;
+}
+
+.aside__contact-group .aside__services-button {
+  margin-right: 16px;
+}
+
+.aside__contact-group {
+  margin-bottom: 16px;
+}
+
+.aside__footer a {
+  color: #1B1C21;
+  display: block;
+}
+
+.aside__menu a {
+  color: #1B1C21;
+}
+
+.aside__menu a:hover {
+  color: #7E7E82;
+}
+
+.aside__footer .phone {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.aside__footer .mail {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.aside__lang-btn {
+  font-size: 16px;
+  border: none;
+  margin-right: 7px;
+
+  cursor: pointer;
+  background-color: white;
+}
+
+.aside__lang-btn:hover {
+  opacity: 0.5;
+}

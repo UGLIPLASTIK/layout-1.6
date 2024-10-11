@@ -1,0 +1,18 @@
+@import './buttons.scss';
+@import './header.scss';
+@import './main.scss';
+@import './main__navigation.scss';
+
+$decorElementColor: #41F6D7;
+$thinTextColor: #7E7E82;
+
+a {
+  text-decoration: none;
+  color: $thinTextColor;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+

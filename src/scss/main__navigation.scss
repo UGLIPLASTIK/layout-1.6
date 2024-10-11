@@ -1,0 +1,35 @@
+
+.main__navigation{
+  margin-bottom: 24px;
+
+  .main__menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  
+    overflow: auto;
+    list-style-type: none;
+  }
+  
+  .main__menu-item {
+    box-sizing:border-box;
+    font-size: 16px;
+    color:#7E7E82;
+    margin-right: 15px;
+    white-space: nowrap;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid #b8ffec00;
+    cursor: pointer;
+    &:hover {
+      border-color:#B8FFEC;
+      background-color: #fff;
+    } &:first-child {
+      margin-left: 16px;
+    }
+  }
+  
+
+}
+
