@@ -1,16 +1,9 @@
-$buttonColor: #FF3E79;
+@import './vars.scss';
+
+
 
 .service-button {
-  height: 40px;
-  width: 40px;
-  background-color: $buttonColor;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-    transition: 0.3s;
-  }
+  @include service-button();
 }
 
 .main__button {
@@ -22,9 +15,123 @@ $buttonColor: #FF3E79;
   background-color: #ffffff00;
   cursor: pointer;
   &:before {
-    content: url(../svg/icon-arrows.svg);
+    content: url(@/svg/icon-arrows.svg);
     position: absolute;
     top: 2px;
     left: 10px;
   }
+  &.unfolded::before {
+    transform: rotate(180deg);
+  }
 }
+
+.service-button--phone {
+  background: url(@/svg/call.svg) center / cover;
+}
+
+.service-button--chat {
+  background: url(@/svg/chat.svg) center / cover;
+}
+
+.service-button--profile {
+  background: url(@/svg/profile.svg) center / cover;
+}
+
+.service-button--close {
+  background: url(@/svg/burger_close.svg) center / cover;
+}
+
+.service-button--burger {
+  background: url(@/svg/burger.svg);
+}
+
+.service-button--search {
+  background: url(@/svg/search.svg) center / cover;
+}
+
+.service-button--checkstatus {
+  background: url(@/svg/checkstatus.svg);
+}
+
+.service-button--repair {
+  background: url(@/svg/repair.svg);
+}
+
+.header .service-button--repair {
+  position: relative;
+  &::before {
+    content: '';
+    height: 32px;
+    width: 2px;
+    background-color: #EAEAEA;
+    position: absolute;
+    left: -20px;
+    bottom: 4px;
+  }
+}
+
+.my-swiper__button,
+.brand-list__button,
+.main__type-button {
+  border: 2px solid $buttonColor;
+  background-color: #fff;
+  &:after {
+    @include service-button-after();
+  }
+}
+
+.main__price-list {
+  .my-swiper__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    
+    width: 120px;
+    height: 32px;
+    padding-left: 12px;
+
+    border-radius: 20px;
+    background-color: $buttonColor;
+
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    line-height: 28px;
+    &::after {
+      @include service-button-after();
+      transform:translate(78px, -18px) rotate(45deg);
+      border-color: #fff;
+    }
+  }
+
+  table {
+    button {
+      @include price-list-btn();
+      border: none;
+      line-height: 32px;
+      &::after {
+        @include service-button-after();
+        transform:translate(78px, -18px) rotate(45deg);
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.brand-list__button {
+  &:after {
+    @include service-button-after();
+    transform:translate(12px, 0) rotate(45deg);
+  }
+}
+
+.main__type-button {
+  align-self: flex-end;;
+}
+
+
+
+
+

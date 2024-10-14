@@ -1,32 +1,324 @@
-$decorElementColor: #41F6D7;
-$mainTextColor: #1B1C21;
-$thinTextColor: #7E7E82;
+@import './vars.scss';
 
 .main {
+
+  margin: 0 auto;
+  max-width: 1120px;
   
-  .main__title {
-    padding-left: 16px;
-    font-size: 2.8rem;
-    &:before {
-      content: "";
-      position: relative;
-      left: -16px;
-      border-radius: 0px 10px 10px 0px;
-      border-left: 4px solid $decorElementColor;
+
+  section {
+    border-top: 1px solid #D9FFF5;
+    max-width: 1120px;
+    margin: 0 auto;
+    
+    position: relative;
+
+
+    .wrapper--folded {
+      height: 180px;
+      overflow: hidden;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
+
+    .main__button {
+      position: absolute;
+      bottom: -60px;
+      margin-left: 18px;
+    }
+
+    @media (min-width: 451px) {
+      margin-bottom: 90px;
+    }
+  }
+
+  .main__button-group {
+    display: none;
+  }
+
+  .main__subtitle {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 16px 0 16px 16px;
+    width: 100vw;
+    background: linear-gradient(45deg, #F8F8F8, #FFFFFF);
+    color: $thinTextColor;
   }
 
   .main__promo {
     padding: 0 10px 0 16px;
+
+    .wrapper--folded {
+      height: 65px;
+      overflow: hidden;
+    }
   }
 
   p {
     padding: 0;
+    margin-bottom: 16px;
     font-size: 15px;
     color: $mainTextColor;
   }
 
   .main__image {
     width: 100%;
+    max-width: 530px;
+    margin-bottom: 16px;
+  }
+
+  .main__image--flex {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 14px;
+    thead {
+      text-align: left;
+      th {
+        font-weight: normal;
+        color: $thinTextColor;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        &:first-child {
+          width: 50%;
+        };
+        &:nth-child(2) {
+          width: 15%;
+        };
+        &:nth-child(3) {
+          width: 15%;
+        }
+      }
+    }
+    tbody {
+      background-color: #ffffff;
+      tr:not(:last-child) {
+        border-bottom: 1px solid #EAEAEA;
+      }
+      td {
+        padding: 16px;
+        &:last-child {
+          text-align: end;
+        }
+      }
+      
+    }
+  }
+
+  .brand-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 20px;
+    padding: 0 24px;
+    margin-bottom: 40px;
+  
+    .brand-list__item {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 20px;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border: 2px solid #EAEAEA;
+      border-radius: 7px;
+    }
+  
+    @media (max-width: 450px) {
+      display: none;
+    }
+
+
+    @media (min-width: 550px) and (max-width: 767px) {
+      .brand-list__item {
+        width: 47%;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .brand-list__item {
+        width: 31%;
+      }
+    }
+  }
+  
+  .main__type-list {
+    @include list-frame();
+    justify-content: center;
+  
+    .main__type-list--item {
+      @include types-equip-slide();
+      width: 30%;
+      height: 160px;
+      flex-direction: column;
+      align-items: start;
+      font-size: 14px;
+      justify-content: space-between;
+    }
+  
+  }
+
+  .main__price-table-wrapper {
+    padding: 0 24px;
+  }
+
+  .main__price-list {
+    margin-bottom: 16px;
+  }
+
+  .main__offer {
+    padding: 0 16px;
+    margin-bottom: 40px;
+    max-width: 450px;
+    p {
+      line-height: 20px;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
+    button {
+      background-color: #ffffff00;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      width: 200px;
+      line-height: 24px;
+      text-align: left;
+      letter-spacing: -0.2px;
+      cursor: pointer;
+
+
+      span {
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid $buttonColor;
+          border-right: 2px solid $buttonColor;
+          position: absolute;
+          right: -15px;
+          top: 35%;
+          transform:rotate(45deg);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    .main__image--full {
+      display: none;
+    }
+
+    .main__subtitle {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 450px) {
+
+    .main__type-wrapper {
+      display: none;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .main__title {
+      margin-bottom: 32px;
+    }
+
+    .main__subtitle {
+      padding-left: 16px;
+    }
+
+    .main__promo {
+      display: flex;
+      padding-bottom: 32px;
+      gap: 20px;
+      .main__image {
+        width: 50%;
+        margin: 0;
+        display: block;
+      }
+      .main__text {
+        width: 50%;
+      }
+    }
+
+    .main__offer button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    table {
+      display: none;
+    }
+
+    .main__price-list .swiper {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 42px;
+
+    .main__subtitle {
+      width: 100%;
+      margin-bottom: 24px;
+      padding-left: 25px;
+    }
+
+    .main__promo {
+      padding: 0 34px;
+      gap: 30px;
+      padding-bottom: 50px;
+    }
+
+    .main__button-title-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-right: 30px;
+
+      .title {
+        margin: 0;
+      }
+      .main__button-group {
+        display: block;
+        .service-button {
+          span {
+            position: relative;
+            left: -140px;
+            white-space: nowrap;
+            font-size: 16px;
+            color: $mainTextColor;
+          }
+        }
+        .service-button--checkstatus {
+          margin-left: 160px;
+        }
+      }
+    }
+
+    .main__type-list {
+      gap: 20px 34px;
+      padding: 0;
+    }
+
+    .main__offer {
+      padding-left: 25px;
+    }
   }
 }
+

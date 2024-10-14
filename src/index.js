@@ -1,10 +1,16 @@
-import '@/css/swiper.bundle.min.css'
+import '@/css/swiper.bundle.min.css';
 import '@/css/style.css';
 import '@/scss/style.scss';
-import '@/swiper-bundle.min.js'
+import '@/swiper-bundle.min.js';
+import '@/js/modal_feedback.js';
+import '@/js/sidebar.js';
+import '@/js/hide_buttons.js'
 
-const swiper = new Swiper(".swiper", {
+
+const swiper = new Swiper('.swiper', {
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
   },
 });
+
+

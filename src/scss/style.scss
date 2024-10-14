@@ -2,9 +2,11 @@
 @import './header.scss';
 @import './main.scss';
 @import './main__navigation.scss';
-
-$decorElementColor: #41F6D7;
-$thinTextColor: #7E7E82;
+@import './swiper.scss';
+@import './footer.scss';
+@import './vars.scss';
+@import './aside.scss';
+@import './modal-feedback.scss';
 
 a {
   text-decoration: none;
@@ -12,7 +14,43 @@ a {
 }
 
 body {
-  background-color: #F8F8F8;
+  background-color: #F8F8F8;  
+  color: $mainTextColor;
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.blured {
+  filter: opacity(0.15);
+}
+
+.title {
+  padding-left: 16px;
+  font-size: 2.8rem;
+  &:before {
+    content: "";
+    position: relative;
+    left: -16px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 4px solid $decorElementColor;
+  }
+}
+
+::placeholder {
+
+  font-size: 16px;
+
+  color: #B5B6BC;
+
+  vertical-align: top;
+}
+
 
 

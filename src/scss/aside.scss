@@ -1,0 +1,136 @@
+@import './vars.scss';
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  padding: 19px 24px 32px;
+
+  background-color: white;
+  // border-right: 1px solid rgba(253, 255, 128, 0.49); 
+
+  width: 320px;
+
+  // box-shadow: 3px 0px 20px 0px #fee08857;
+
+  .aside__header {
+    margin-bottom: 46px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .aside_logo {
+    margin-right: auto;
+  }
+  
+  .service-button span {
+    display: none;
+  }
+
+  .service-button--close {
+    margin-right: 17px;
+  }
+  
+  .aside__menu {
+    list-style-type: none;
+    font-size: 16px;
+    margin-bottom: 200px;
+
+    .aside__menu-item {
+      padding-bottom: 24px;
+      cursor: pointer;
+    }
+    
+    .aside__menu-item:hover::before {
+      content: "";
+      position: absolute;
+      transform: translateX(-2.4rem) translateY(-5px);
+      height: 32px;
+      border-radius: 0px 10px 10px 0px;
+      border-left: 4px solid #41F6D7;
+    }
+  }
+  
+  a {
+    color: #1B1C21;
+    &:hover {
+      color: #7E7E82;
+    }
+  }
+
+  .aside__footer { 
+
+    a {
+      color: #1B1C21;
+      display: block;
+    }
+
+    .phone {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .aside__contact-group {
+      margin-bottom: 16px;
+      .service-button {
+        margin-right: 16px;
+      }
+    }
+
+    .mail {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .aside__lang-btn {
+      font-size: 16px;
+      border: none;
+      margin-right: 7px;
+    
+      cursor: pointer;
+      background-color: white;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // @media (max-width:1439px) {
+  //   display: none;
+  // }
+
+  @media (max-width: 360px) {
+    max-width: 360px;
+    height: auto;
+  }
+
+  @media (max-width: 1439px) {
+    padding: 18px 16px 32px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: scroll;
+    width: 100%;
+    max-width: 360px;
+    min-height: 100%;
+
+    .aside__header {
+      margin-bottom: 15px;
+    }
+
+    .aside__menu {
+      margin: 0;
+    }
+  }
+
+
+
+  @media (min-width:1440px) {
+    .service-button--close {
+      display: none;
+    }
+  }
+}
+

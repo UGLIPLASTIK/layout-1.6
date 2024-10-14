@@ -1,45 +1,42 @@
 @import './buttons.scss';
 
-
-
 .header {
-  padding: 18px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: #fff;
+  .header__wrapper {
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
 
   .header__button-group {
     display: flex;
     gap: 16px;
   }
 
+  .header__button-group--callback {
+    margin-left: auto;
+    margin-right: 40px;
+    display: none;
+  }
+
   .header__logo {
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: 16px;
   }
 
-  .header__service-button--burger {
-    background: url(@/svg/burger.svg);
-  }
-
-  .header__service-button--checkstatus {
-    background: url(@/svg/checkstatus.svg);
-  }
-
-  .header__service-button--repair {
-    background: url(@/svg/repair.svg);
-    position: relative;
-    &::before {
-      content: '';
-      height: 32px;
-      width: 2px;
-      background-color: #EAEAEA;
-      position: absolute;
-      left: -20px;
-      bottom: 4px;
+  @media (min-width: 550px) {
+    .header__button-group--callback {
+      display: flex;
     }
   }
 
-  
+  @media (min-width: 1440px) {
+    display: none;
+  }
 }
 

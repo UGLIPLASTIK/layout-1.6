@@ -1,0 +1,65 @@
+$decorElementColor: #41F6D7;
+$mainTextColor: #1b1c21;
+$thinTextColor: #7E7E82;
+$upperLineColor: #D9FFF5;
+$buttonColor: #FF3E79;
+// $mainWidth: 
+
+@mixin service-button() {
+  height: 40px;
+  width: 40px;
+  background-color: $buttonColor;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+@mixin service-button-after() {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid $buttonColor;
+  border-right: 2px solid $buttonColor;
+  transform:translate(12px, 15px) rotate(45deg);
+}
+@mixin price-list-btn() {
+  width: 120px;
+  height: 32px;
+  padding-left: 12px;
+
+  border-radius: 20px;
+  background-color: $buttonColor;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  line-height: 28px;
+  &::after {
+    transform:translate(78px, -18px) rotate(45deg);
+    border-color: #fff;
+  }
+}
+@mixin types-equip-slide() {
+  background-color: #fff;
+  border: 1px solid #EAEAEA;
+  border-radius: 7px;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  padding: 16px;
+}
+@mixin list-frame() {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 20px;
+  padding: 0 24px;
+  margin-bottom: 40px;
+}

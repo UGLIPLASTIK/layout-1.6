@@ -1,0 +1,75 @@
+@import './vars.scss';
+
+.modal-feedback {
+  width: 100%;
+  max-width: 440px;
+  min-height: 100%;
+  padding-top: 24px;
+  border: none;
+
+  &::backdrop {
+    display: none;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  button {
+    margin-left: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+    * {
+      margin-bottom: 16px;
+    }
+
+    input,
+    textarea {
+      height: 48px;
+      border: 2px solid #EAEAEA;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    textarea {
+      height: 118px;
+    }
+
+    .service-button {
+      width: 120px;
+      height: 32px;
+      padding-left: 12px;
+      margin-left: auto;
+      border-radius: 20px;
+      background-color: #FF3E79;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #fff;
+      text-align: left;
+      line-height: 32px;
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #FF3E79;
+        border-right: 2px solid #FF3E79;
+        transform: translate(85px, -20px) rotate(45deg);
+        border-color: #fff;
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    span {
+      color:$buttonColor;
+    }
+  }
+}
