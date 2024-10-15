@@ -111,10 +111,15 @@
       @include price-list-btn();
       border: none;
       line-height: 32px;
+      cursor: pointer;
       &::after {
         @include service-button-after();
         transform:translate(78px, -18px) rotate(45deg);
         border-color: #fff;
+      }
+      &:hover {
+        opacity: 0.6;
+        transition: 0.2s;
       }
     }
   }

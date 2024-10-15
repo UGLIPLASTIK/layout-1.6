@@ -34,6 +34,9 @@
       border: 2px solid #EAEAEA;
       border-radius: 10px;
       padding: 16px;
+      &:focus {
+        outline-color: $decorElementColor;
+      }
     }
 
     textarea {
